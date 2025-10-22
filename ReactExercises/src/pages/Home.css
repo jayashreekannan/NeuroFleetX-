@@ -1,0 +1,33 @@
+.home-container {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  min-height: 100vh;
+}
+
+.home-container h1 {
+  font-size: 3rem;
+  color: #1e3d59;
+  margin-bottom: 20px;
+}
+
+.home-container p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.home-buttons .button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #2575fc, #6a11cb);
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.home-buttons .button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}

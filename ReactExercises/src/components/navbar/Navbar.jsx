@@ -1,28 +1,24 @@
 import { Link } from "react-router-dom";
-import { useContext } from "react";
-import { AuthContext } from "../../context/AuthContext";
+import logo from "../../assets/logo.jpg";
 import "./Navbar.css";
 
 const Navbar = () => {
-  const { user, logout } = useContext(AuthContext);
-
   return (
-    <div className="navbar">
-      <Link to="/" className="navbar-logo">NeuroFleetX</Link>
-      <div className="navbar-links">
-        {user ? (
-          <>
-            <span className="navbar-user">{user.username}</span>
-            <button onClick={logout} className="navbar-btn">Logout</button>
-          </>
-        ) : (
-          <>
-            <Link to="/login" className="navbar-link">Login</Link>
-            <Link to="/register" className="navbar-link">Register</Link>
-          </>
-        )}
+    <nav className="navbar">
+      <div className="navbar-container">
+        <Link to="/" className="navbar-logo">
+          <img src={logo} alt="logo" />
+          <span>NeuroFleetX-<span className="accent">AI</span></span>
+        </Link>
+
+        <div className="navbar-links">
+          <Link to="/">Home</Link>
+          <Link to="/login">Login</Link>
+          <Link to="/register">Sign up</Link>
+          <Link to="/dashboard">Dashboard</Link>
+        </div>
       </div>
-    </div>
+    </nav>
   );
 };
 

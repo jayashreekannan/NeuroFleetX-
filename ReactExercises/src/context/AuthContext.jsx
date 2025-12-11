@@ -10,7 +10,7 @@ export const AuthProvider = ({ children }) => {
     // Simulate JWT login
     return new Promise((resolve, reject) => {
       if (username && password) {
-        const token = "fake-jwt-token"; 
+        const token = "fake-jwt-token";
         const userData = { username, role: username === "admin" ? "admin" : "customer", token };
         localStorage.setItem("user", JSON.stringify(userData));
         setUser(userData);
